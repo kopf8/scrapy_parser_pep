@@ -1,6 +1,5 @@
 from pathlib import Path
 
-
 PEP_URL = 'peps.python.org'
 START_URL = 'https://peps.python.org/'
 BASE_DIR = Path(__file__).parent.parent
@@ -19,7 +18,7 @@ NEWSPIDER_MODULE = 'pep_parse.spiders'
 ROBOTSTXT_OBEY = True
 
 ITEM_PIPELINES = {
-   'pep_parse.pipelines.PepParsePipeline': 300,
+    'pep_parse.pipelines.PepParsePipeline': 300,
 }
 
 FEEDS = {

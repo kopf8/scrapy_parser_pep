@@ -2,9 +2,9 @@ import csv
 import datetime as dt
 from collections import defaultdict
 
-from pep_parse.settings import (DATETIME_FORMAT, FILE_FORMAT,
-                                RESULTS_DIR, SUMMARY_FILENAME,
-                                SUMMARY_TABLE_LAST_ROW, SUMMARY_TABLE_HEADERS)
+from pep_parse.settings import (DATETIME_FORMAT, FILE_FORMAT, RESULTS_DIR,
+                                SUMMARY_FILENAME, SUMMARY_TABLE_HEADERS,
+                                SUMMARY_TABLE_LAST_ROW)
 
 
 class PepParsePipeline:
