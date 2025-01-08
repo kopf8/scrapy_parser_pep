@@ -1,9 +1,8 @@
 from pathlib import Path
 
 PEP_URL = 'peps.python.org'
-START_URL = 'https://peps.python.org/'
 BASE_DIR = Path(__file__).parent.parent
-RESULTS_DIR = BASE_DIR / 'results'
+RESULTS_DIR = 'results'
 SUMMARY_FILENAME = 'status_summary'
 DATETIME_FORMAT = '%Y-%m-%d_%H-%M-%S'
 FILE_FORMAT = 'csv'
@@ -22,9 +21,9 @@ ITEM_PIPELINES = {
 }
 
 FEEDS = {
-    'results/pep_%(time)s.csv': {
+    f'{RESULTS_DIR}/pep_%(time)s.csv': {
         'format': 'csv',
         'fields': ['number', 'name', 'status'],
-        'overwrite': True
+        'overwrite': True,
     },
 }

@@ -2,15 +2,15 @@ import csv
 import datetime as dt
 from collections import defaultdict
 
-from pep_parse.settings import (DATETIME_FORMAT, FILE_FORMAT, RESULTS_DIR,
-                                SUMMARY_FILENAME, SUMMARY_TABLE_HEADERS,
-                                SUMMARY_TABLE_LAST_ROW)
+from pep_parse.settings import (BASE_DIR, DATETIME_FORMAT, FILE_FORMAT,
+                                RESULTS_DIR, SUMMARY_FILENAME,
+                                SUMMARY_TABLE_HEADERS, SUMMARY_TABLE_LAST_ROW)
 
 
 class PepParsePipeline:
 
     def __init__(self):
-        self.results_dir = RESULTS_DIR
+        self.results_dir = BASE_DIR / RESULTS_DIR
         self.results_dir.mkdir(exist_ok=True)
 
     def open_spider(self, spider):
